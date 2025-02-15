@@ -9,10 +9,22 @@
 <body>
     <header>
         <h1>Movie Recommendations</h1>
-        <input type="text" id="search" placeholder="Search for a movie...">
-        <button onclick="searchMovie()">Search</button>
+        <input type="text" id="searchInput" placeholder="Search for a movie or series">
+        <button id="searchButton">Search</button>
+        <div id="searchResults"></div>
     </header>
-    <main id="results"></main>
+    <main id="results">
+        <section>
+            <h2>
+                Trending Movies
+            </h2>
+            <div id="trending-movies" class="movies-container"></div>
+
+            <h2>Trending Series</h2>
+            <div id="trending-series" class="movies-container"></div>
+        </section>
+    </main>
+    <div id="trailer-container"></div>
     <script type="module" src="scripts.js"></script>
 </body>
 </html>

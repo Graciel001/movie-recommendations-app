@@ -13,3 +13,23 @@ input, button {
     padding: 10px;
     margin: 10px;
 }
+
+
+.movies-container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.movie {
+    text-align: center;
+    min-width: 150px;
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
