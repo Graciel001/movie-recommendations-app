@@ -52,6 +52,25 @@ async function loadGenres() {
     }
 }
 
+document.addEventListener("click", async (event) => {
+    if (event.target.classList.contains("trailer-btn")) {
+        const movieTitle = event.target.getAttribute("data-title");
+
+        if (!movieTitle) {
+            document.getElementById("trailer-container").innerHTML = "Trailer Not Available 😔";
+            return;
+        }
+
+        const trailerUrl = await getMovieTrailer(movieTitle);
+
+        document.getElementById("trailer-container").innerHTML = trailerUrl
+            ? `<iframe width="560" height="315" src="${trailerUrl}" frameborder="0" allowfullscreen></iframe>`
+            : "Trailer Not Available 😔";
+    }
+});
+
+
+
 // load movies, series
 getTrending("movie").then(movies => displayTrending(movies, "trending-movies"));
 getTrending("tv").then(series => displayTrending(series, "trending-series"));
