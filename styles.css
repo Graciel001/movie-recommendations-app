@@ -32,4 +32,11 @@ input, button {
     border-radius: 10px;
 }
 
+#searchResults {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px;
+    scroll-behavior: smooth;
+}
 
